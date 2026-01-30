@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 3000;
 
-app.use('/api/users', userRouter);
-app.use('/api/posts', postRouter);
+app.use('/api', userRouter);
+app.use('/api', postRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on ${port}`)
